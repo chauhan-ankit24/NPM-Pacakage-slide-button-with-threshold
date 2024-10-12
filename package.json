@@ -1,0 +1,30 @@
+{
+  "name": "slide-button-with-threshold",
+  "version": "2.0.3",
+  "description": "a sliding button with animation effects",
+  "main": "src/SlideToPayButton.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "button",
+    "sliding"
+  ],
+  "author": "Ankit Chauhan",
+  "license": "ISC",
+  "peerDependencies": {
+    "react-native": "^0.75.4",
+    "react-native-gesture-handler": "^2.20.0",
+    "expo-linear-gradient": "^13.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.11",
+    "@types/react-native": "^0.73.0"
+  },
+  "files": [
+    "src",
+    "assets",
+    "index.js",
+    "package.json"
+  ]
+}
