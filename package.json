@@ -1,6 +1,6 @@
 {
   "name": "slide-button-with-threshold",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Sliding Button with Animated Slide & Color Transition and Elastic bounce",
   "main": "src/SlideToPayButton.tsx",
   "types": "src/SlideToPayButton.d.ts",

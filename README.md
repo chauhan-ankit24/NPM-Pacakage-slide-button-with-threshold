@@ -5,6 +5,19 @@ A customizable slide-to-execute button for React Native applications.
 ![Sliding Button Demo1](./assets/preview1.gif)
 ![Sliding Button Demo2](./assets/preview2.gif)
 
+## Features
+
+- **Customizable Text**: Set a custom label for the button.
+- **Threshold Control**: Define the percentage of the slider width required to trigger the action.
+- **Animations**: Enjoy elastic bounce effects and visual feedback when sliding.
+- **Gesture Support**: Utilizes gesture handling for smooth user interactions.
+
+## System Design
+
+For insights into the design process and considerations behind this sliding button component, check out this article:
+
+[Understanding System Design for User Interfaces](https://medium.com/swiggydesign/healthy-friction-in-ux-a46c800cb479)
+
 ## Installation
 
 You can install the package using npm:
