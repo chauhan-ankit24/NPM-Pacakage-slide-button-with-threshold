@@ -2,6 +2,9 @@
 
 A customizable slide-to-execute button for React Native applications.
 
+![Sliding Button Demo1](./assets/preview1.gif)
+![Sliding Button Demo2](./assets/preview2.gif)
+
 ## Installation
 
 You can install the package using npm:
@@ -16,35 +19,56 @@ Make sure to also install the required peer dependencies if they are not already
 npm install react-native-gesture-handler react react-native
 ```
 
+Additionally, wrap your main application component with `GestureHandlerRootView` to enable gesture handling:
+
+```javascript
+import React from "react";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+
+const App = () => {
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      {/* Your app components */}
+    </GestureHandlerRootView>
+  );
+};
+```
+
 ## How to Use the Package
 
 Import the necessary components from React Native and your package. Here's an example of how to implement the sliding button:
 
 ```javascript
-import React from 'react';
-import { Alert, SafeAreaView } from 'react-native';
-import SlideToPayButton from 'slide-button-with-threshold';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import React from "react";
+import { Alert, SafeAreaView } from "react-native";
+import SlideToPayButton from "slide-button-with-threshold";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 const App = () => {
-    const handleActionComplete = () => {
-        Alert.alert('Action completed!');
-    };
+  const handleActionComplete = () => {
+    Alert.alert("Action completed!");
+  };
 
-    return (
-        <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <GestureHandlerRootView>
-                <SlideToPayButton
-                    onComplete={handleActionComplete}
-                    // Optionally customize the button with the following props:
-                    // text="Slide to Execute" // Custom label
-                    // threshold={0.7} // Custom threshold
-                    // sliderWidth={300} // Custom slider width
-                    // sliderHeight={70} // Custom slider height
-                />
-            </GestureHandlerRootView>
-        </SafeAreaView>
-    );
+  return (
+    <SafeAreaView
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <GestureHandlerRootView>
+        <SlideToPayButton
+          onComplete={handleActionComplete}
+          // text="Slide to Execute" // Custom label
+          // threshold={0.7} // Custom threshold
+          // sliderWidth={300} // Custom slider width
+          // sliderHeight={70} // Custom slider height
+          // thumbWidth={55} // Custom thumb width
+        />
+      </GestureHandlerRootView>
+    </SafeAreaView>
+  );
 };
 
 export default App;
@@ -52,10 +76,11 @@ export default App;
 
 ### Props
 
-- **`text`** *(string)*: Custom label for the button (default: "Slide to Execute").
-- **`threshold`** *(number)*: Percentage of slider width to reach for action completion (default: `0.7`).
-- **`sliderWidth`** *(number)*: Width of the slider (default: `300`).
-- **`sliderHeight`** *(number)*: Height of the slider (default: `70`).
-- **`onComplete`** *(function)*: Callback function to be called when the action is completed.
+- **`text`** _(string)_: Custom label for the button (default: "Slide to Execute").
+- **`threshold`** _(number)_: Percentage of slider width to reach for action completion (default: `0.7`).
+- **`sliderWidth`** _(number)_: Width of the slider (default: `300`).
+- **`sliderHeight`** _(number)_: Height of the slider (default: `70`).
+- **`thumbWidth`** _(number)_: Width of the draggable thumb (default: 55).
+- **`onComplete`** _(function)_: Callback function to be called when the action is completed.
 
 Feel free to customize the props to fit your design requirements!

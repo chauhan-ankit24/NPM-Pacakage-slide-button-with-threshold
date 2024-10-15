@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, Animated, Dimensions, Alert, Image } from 'react-native';
+import { StyleSheet, Animated, Dimensions, Image } from 'react-native';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
 import Shimmering from './shimmer';
 
@@ -9,6 +9,7 @@ interface SlideToPayButtonProps {
     threshold?: number; // Custom threshold for payment completion
     sliderWidth?: number; // Custom width for the slider
     sliderHeight?: number; // Custom height for the slider
+    thumbWidth?: number; // Custom width for the draggable thumb
 }
 
 const SlideToPayButton: React.FC<SlideToPayButtonProps> = ({
@@ -17,11 +18,11 @@ const SlideToPayButton: React.FC<SlideToPayButtonProps> = ({
     threshold = 0.7, // Default threshold (70%)
     sliderWidth,
     sliderHeight = 70, // Default height
+    thumbWidth = 55, // Default thumb width
 }) => {
     const { width } = Dimensions.get('window');
     const SLIDER_WIDTH = sliderWidth || width * 0.91; // Use custom width or default
-    const THUMB_WIDTH = 55; // Width of the draggable thumb
-    const PAYMENT_THRESHOLD = threshold * (SLIDER_WIDTH - THUMB_WIDTH); // Custom threshold
+    const PAYMENT_THRESHOLD = threshold * (SLIDER_WIDTH - thumbWidth); // Custom threshold
 
     const translationX = useState(new Animated.Value(0))[0];
     const bounceAnim = useState(new Animated.Value(0))[0];
@@ -184,8 +185,8 @@ const SlideToPayButton: React.FC<SlideToPayButtonProps> = ({
                             transform: [
                                 {
                                     translateX: translationX.interpolate({
-                                        inputRange: [0, SLIDER_WIDTH - THUMB_WIDTH],
-                                        outputRange: [0, SLIDER_WIDTH - THUMB_WIDTH],
+                                        inputRange: [0, SLIDER_WIDTH - thumbWidth],
+                                        outputRange: [0, SLIDER_WIDTH - thumbWidth],
                                         extrapolate: 'clamp',
                                     }),
                                 },

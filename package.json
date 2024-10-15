@@ -1,16 +1,72 @@
 {
   "name": "slide-button-with-threshold",
-  "version": "2.0.3",
-  "description": "a sliding button with animation effects",
+  "version": "2.1.0",
+  "description": "Sliding Button with Animated Slide & Color Transition and Elastic bounce",
   "main": "src/SlideToPayButton.tsx",
+  "types": "src/SlideToPayButton.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "button",
-    "sliding"
+    "sliding",
+    "friction",
+    "intentional",
+    "shimmer",
+    "bounce",
+    "hinting",
+    "tooltip",
+    "haptic",
+    "completion",
+    "threshold",
+    "chevron",
+    "progress",
+    "feedback",
+    "accessible",
+    "customization",
+    "theming",
+    "optimization",
+    "animation",
+    "conversion",
+    "interaction",
+    "persistence",
+    "gesture",
+    "alignment",
+    "experimentation",
+    "usability",
+    "decision-making",
+    "tap",
+    "drop-off",
+    "engagement",
+    "visible",
+    "comfortable",
+    "flow",
+    "authentication",
+    "tooling",
+    "signal",
+    "education",
+    "UX",
+    "design",
+    "iteration",
+    "stakeholders",
+    "swiggy",
+    "payment"
   ],
   "author": "Ankit Chauhan",
+  "contributors": [
+    {
+      "name": "Ankit Chauhan",
+      "email": "akashchauhan72520@gmail.com.com",
+      "url": "https://github.com/chauhan-ankit24"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chauhan-ankit24/NPM-Pacakage-slide-button-with-threshold.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ankitchauhan/slide-button-with-threshold/issues"
+  },
   "license": "ISC",
   "peerDependencies": {
     "react-native": "^0.75.4",
@@ -22,9 +78,10 @@
     "@types/react-native": "^0.73.0"
   },
   "files": [
-    "src",
     "assets",
-    "index.js",
+    "README.md",
+    "LICENSE",
     "package.json"
-  ]
+  ],
+  "sideEffects": false
 }
